@@ -76,21 +76,25 @@ There is very little difference apparent between the original image and a normal
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-My model was based on LeNet architecture. The final model consisted of the following layers:
+My model was based on LeNet architecture [cell 14]. The final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 RGB image   							| 
-| Convolution 5x5     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Convolution 5x5     	| 1x1 stride, valid padding, output 28x38x6 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
-
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
+| Convolution 5x5	    | 1x1 stride, valid padding, output 10x10x16		|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x6 				|
+| Fully connected		| 400 (input) to 120 (output)						|
+| RELU					|												|
+| Dropout        		| Randomly dropout some units during training 			|
+| Fully connected		| 120 (input) to 84 (output)						|
+| RELU					|												|
+| Dropout        		| Randomly dropout some units during training 			|
+| Fully connected		| 84 (input) to 43 (output)						|
+|:---------------------:|:---------------------------------------------:| 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
