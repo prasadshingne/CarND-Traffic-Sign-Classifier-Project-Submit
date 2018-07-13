@@ -118,6 +118,7 @@ If an iterative approach was chosen:
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are eight German traffic signs that I found on the web:
+
 ![alt text][image5] 
 
 The slippery road [first] and road work [sixth] image might be difficult to classify because they simply do not appear to be clear. The road work image seems to be taken at an angle and the sign appears squeezed horizontally. The first, second, third, fifth and seventh images also have significant "noise" (trees and other background information) behind the sign of interest which could make the classification difficult.
@@ -125,6 +126,7 @@ The slippery road [first] and road work [sixth] image might be difficult to clas
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
+
 ![alt text][image6] 
 
 The model was able to correctly classify all the selected test images [cell 24 and cell 25].
@@ -138,14 +140,14 @@ The model picks the correct label with very high probability (more than 5 decima
 The table below presents the top 5 softmax probabilities for each image along with the corresponding labels.
 
 Predictions:
-* 1.       0.       0.       0.       0.     
-* 1.       0.       0.       0.       0.     
-* 0.99999  0.00001  0.       0.       0.     
-* 1.       0.       0.       0.       0.     
-* 1.       0.       0.       0.       0.     
-* 1.       0.       0.       0.       0.     
-* 1.       0.       0.       0.       0.     
-* 1.       0.       0.       0.       0.     
+* 1.0       0.       0.       0.       0.     
+* 1.0       0.       0.       0.       0.     
+* 0.99999   0.00001  0.       0.       0.     
+* 1.0       0.       0.       0.       0.     
+* 1.0       0.       0.       0.       0.     
+* 1.0       0.       0.       0.       0.     
+* 1.0       0.       0.       0.       0.     
+* 1.0       0.       0.       0.       0.     
 
 Labels:
 
