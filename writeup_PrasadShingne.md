@@ -72,7 +72,7 @@ Then I normalized the grayscaled images - this brings the mean of the data close
 
 There is very little difference apparent between the original image and a normalized image [cell 10]:
 
-![alt text][image3]
+![alt text][image4]
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
