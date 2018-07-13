@@ -106,12 +106,11 @@ My final model results were [cell 20]:
 * validation set accuracy of 0.967 
 * test set accuracy of 0.943
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+Some notes about the iterative changes to the architecture and tuning parameters for epochs, learn rate and batch size:
+* I started exactly with the LeNet architecture provided in the class material. This did not work as well and I added the two dropouts after the fully connected layers to avoid overfitting. A 50% dropout probability worked the best.
+* Concequently I had to increse the number of epochs to 75 which seemed to give the best results.
+* I played around with the batch size a little and settled on 100 as it gave the best results.
+* The learn rate had significant effect on the training. A value of 0.0006 gave the best balance of learning fast enough without jumping around the optimum too much.
 
 ### Test a Model on New Images
 
@@ -165,4 +164,12 @@ Labels:
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
+Cells 28 to 33 shows the visualization of my nural network through conv1, conv1_relu, conv1_pool, conv2, conv2_relu and conv2_pool. Conv2 onwards it becomes difficult to intuitively make sence of the features displayed. 
 
+The next three figures show the conv1, conv1_relu and conv1_pool visualization respectively - 
+
+![alt text][image7] 
+![alt text][image8] 
+![alt text][image9] 
+
+The NN identifies lines and blobs that look like the boundaries of the sign and the features displayed within. This helps the NN identify the different parts of each sign and put them together to identify the sign.
